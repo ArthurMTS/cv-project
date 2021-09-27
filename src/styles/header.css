@@ -1,0 +1,33 @@
+#header {
+  background-color: #252530;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 100px;
+}
+
+#title {
+  color: #eee;
+}
+
+#nav {
+  display: flex;
+  border: 2px solid rgb(165, 160, 160);
+  border-radius: 5px;
+  gap: 10px;
+  padding: 5px;
+}
+
+#nav button {
+  padding: 10px;
+  min-width: 150px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(85, 135, 228);
+  color: #eee;
+}
+
+#nav button:first-child {
+  background-color: #353545;
+}

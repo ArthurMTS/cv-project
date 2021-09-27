@@ -1,0 +1,21 @@
+#footer {
+  background-color: #252530;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+#footer a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  padding: 2px;
+}
+
+#footer-text {
+  font-size: 18px;
+  color: #fff;
+}
