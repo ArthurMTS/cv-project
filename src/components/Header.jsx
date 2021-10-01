@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { Button } from './Form';
+
 import '../styles/header.css';
 
 export class Header extends Component {
@@ -8,8 +10,8 @@ export class Header extends Component {
       <header id='header'>
         <h1 id='title'>CV Creator</h1>
         <nav id='nav'>
-          <button className='button'>Edit mode</button>
-          <button className='button'>Preview mode</button>
+          <Button className='blocked'>Edit mode</Button>
+          <Button>Preview mode</Button>
         </nav>
       </header>
     );

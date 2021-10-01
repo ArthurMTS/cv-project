@@ -4,6 +4,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
 }
 
 #title {
@@ -16,18 +20,4 @@
   border-radius: 5px;
   gap: 10px;
   padding: 5px;
-}
-
-#nav button {
-  padding: 10px;
-  min-width: 150px;
-  font-size: 18px;
-  border: none;
-  border-radius: 5px;
-  background-color: rgb(85, 135, 228);
-  color: #eee;
-}
-
-#nav button:first-child {
-  background-color: #353545;
 }
