@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Form, Input, Button } from '../Form';
+import { Input, Button } from '../FormElements';
 
 import '../../styles/section.css';
 
@@ -8,7 +8,7 @@ export class Educational extends Component {
   render() {
     return (
       <section className='section' id='practical-exp'>
-        <Form>
+        <form>
           <Input type='text' placeholder='Institution Name' />
           <Input type='text' placeholder='Title' />
           <div className='start-finish'>
@@ -20,7 +20,7 @@ export class Educational extends Component {
             <Button className='remove'>Remove</Button>
           </div>
           <Button>Add</Button>
-        </Form>
+        </form>
       </section>
     );
   }

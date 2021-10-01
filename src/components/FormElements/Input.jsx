@@ -6,7 +6,7 @@ export class Input extends Component {
 
   render() {
     return (
-      <input {...this.props} />
+      <input {...this.props} required />
     );
   }
 }
