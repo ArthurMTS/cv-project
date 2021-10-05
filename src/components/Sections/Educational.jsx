@@ -46,51 +46,51 @@ export class Educational extends Component {
 
   render() {
     return (
-      <section className='section' id='practical-exp'>
+      <section className='section' id='educational-exp'>
         {
           this.state.edit ?
             <form onSubmit={this.handleSubmit}>
-            <Input 
-              name='institution' 
-              type='text' 
-              placeholder='Institution Name'
-              onChange={this.handleChange}
-              value={this.state.institution}
-            />
-            <Input 
-              name='title' 
-              type='text' 
-              placeholder='Title'
-              onChange={this.handleChange}
-              value={this.state.title}
-            />
-            <div className='start-finish'>
               <Input 
-                name='start' 
+                name='institution' 
                 type='text' 
-                placeholder='Start'
+                placeholder='Institution Name'
                 onChange={this.handleChange}
-                value={this.state.start}
+                value={this.state.institution}
               />
-              <Input
-                name='finish'
-                type='text'
-                placeholder='Finish'
+              <Input 
+                name='title' 
+                type='text' 
+                placeholder='Title'
                 onChange={this.handleChange}
-                value={this.state.finish}
+                value={this.state.title}
               />
+              <div className='start-finish'>
+                <Input 
+                  name='start' 
+                  type='text' 
+                  placeholder='Start'
+                  onChange={this.handleChange}
+                  value={this.state.start}
+                />
+                <Input
+                  name='finish'
+                  type='text'
+                  placeholder='Finish'
+                  onChange={this.handleChange}
+                  value={this.state.finish}
+                />
+              </div>
+              <Button type='submit'>Submit</Button>
+            </form> :
+            <div className='info'>
+              <div className="data">
+                <p><strong>Institution:</strong> {this.state.institution}</p>
+                <p><strong>Title:</strong> {this.state.title}</p>
+                <p><strong>Start:</strong> {this.state.start}</p>
+                <p><strong>Finish:</strong> {this.state.finish}</p>
+              </div>
+              <Button onClick={this.handleEdit}><img src={edit} alt='Edit Icon' /></Button>
             </div>
-            <Button type='submit'>Submit</Button>
-          </form> :
-          <div className='info'>
-            <div className="data">
-              <p><strong>Institution:</strong> {this.state.institution}</p>
-              <p><strong>Title:</strong> {this.state.title}</p>
-              <p><strong>Start:</strong> {this.state.start}</p>
-              <p><strong>Finish:</strong> {this.state.finish}</p>
-            </div>
-            <Button onClick={this.handleEdit}><img src={edit} alt='Edit Icon' /></Button>
-          </div>
         }
       </section>
     );
