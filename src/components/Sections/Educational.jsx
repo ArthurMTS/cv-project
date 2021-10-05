@@ -10,12 +10,14 @@ export class Educational extends Component {
   constructor(props) {
     super(props);
 
+    const { institution, title, start, finish } = this.props.educational;
+
     this.state = {
-      institution: '',
-      title: '',
-      start: '',
-      finish: '',
-      edit: true
+      institution,
+      title,
+      start,
+      finish,
+      edit: !(institution && title && start && finish)
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -42,6 +44,9 @@ export class Educational extends Component {
 
     console.log(this.state);
     this.setState({ edit: false });
+
+    const { institution, title, start, finish } = this.state;
+    this.props.handler(institution, title, start, finish);
   }
 
   render() {

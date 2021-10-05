@@ -10,13 +10,15 @@ export class Practical extends Component {
   constructor(props) {
     super(props);
 
+    const { company, position, mainTask, start, finish } = this.props.practical;
+
     this.state = {
-      company: '',
-      position: '',
-      mainTask: '',
-      start: '',
-      finish: '',
-      edit: true
+      company,
+      position,
+      mainTask,
+      start,
+      finish,
+      edit: !(company && position && mainTask && start && finish)
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -43,6 +45,9 @@ export class Practical extends Component {
 
     console.log(this.state);
     this.setState({ edit: false });
+
+    const { company, position, mainTask, start, finish } = this.state;
+    this.props.handler(company, position, mainTask, start, finish);
   }
 
   render() {

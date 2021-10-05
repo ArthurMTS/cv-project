@@ -10,11 +10,13 @@ export class General extends Component {
   constructor(props) {
     super(props);
 
+    const { name, email, phone } = this.props.general;
+
     this.state = {
-      name: '',
-      email: '',
-      phone: '',
-      edit: true
+      name,
+      email,
+      phone,
+      edit: !(name && email && phone)
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -39,8 +41,10 @@ export class General extends Component {
   handleSubmit(event) {
     event.preventDefault();
 
-    console.log(this.state);
     this.setState({ edit: false });
+
+    const { name, email, phone } = this.state;
+    this.props.handler(name, email, phone);
   }
 
   render() {
