@@ -43,7 +43,6 @@ export class Practical extends Component {
   handleSubmit(event) {
     event.preventDefault();
 
-    console.log(this.state);
     this.setState({ edit: false });
 
     const { company, position, mainTask, start, finish } = this.state;

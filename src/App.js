@@ -5,32 +5,21 @@ import { Footer } from './components/Footer';
 import { Edit } from './pages/Edit';
 import { Preview } from './pages/Preview';
 
+import { setData, getData } from './services/storage';
+
 import './styles/global.css';
 
 export default class App extends Component {
   constructor(props) {
     super(props);
 
+    const { general, educational, practical } = getData('data');
+
     this.state = {
       edit: true,
-      general: {
-        name: '',
-        email: '',
-        phone: ''
-      },
-      educational: {
-        institution: '',
-        title: '',
-        start: '',
-        finish: ''
-      },
-      practical: {
-        company: '',
-        position: '',
-        mainTask: '',
-        start: '',
-        finish: ''
-      }
+      general,
+      educational,
+      practical
     };
 
     this.changePage = this.changePage.bind(this);
@@ -51,6 +40,9 @@ export default class App extends Component {
     };
 
     this.setState({ general });
+
+    const { educational, practical } = this.state;
+    setData('data', { general, educational, practical });
   }
 
   handleEducational(institution, title, start, finish) {
@@ -62,6 +54,9 @@ export default class App extends Component {
     };
 
     this.setState({ educational });
+
+    const { general, practical } = this.state;
+    setData('data', { general, educational, practical });
   }
 
   handlePractical(company, position, mainTask, start, finish) {
@@ -74,6 +69,9 @@ export default class App extends Component {
     };
 
     this.setState({ practical });
+
+    const { general, educational } = this.state;
+    setData('data', { general, educational, practical });
   }
 
   render() {

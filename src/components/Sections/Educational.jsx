@@ -42,7 +42,6 @@ export class Educational extends Component {
   handleSubmit(event) {
     event.preventDefault();
 
-    console.log(this.state);
     this.setState({ edit: false });
 
     const { institution, title, start, finish } = this.state;
