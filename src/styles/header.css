@@ -1,0 +1,16 @@
+header {
+  background-color: #252535;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 100px;
+}
+
+header h1 {
+  color: rgb(121, 165, 247);
+}
+
+header nav {
+  border: 2px solid cornflowerblue;
+  border-radius: 7px;
+}

@@ -1,0 +1,28 @@
+footer {
+  background-color: #252535;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  gap: 10px;
+}
+
+footer p {
+  color: #fff;
+  font-size: 18px;
+}
+
+footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .2s;
+}
+
+footer a:hover {
+  transform: scale(1.1);
+}
