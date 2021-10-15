@@ -1,0 +1,92 @@
+#preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+
+#preview header {
+  display: flex;
+  align-items: center;
+  gap: 10vw;
+  border: 3px solid gray;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+#general {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#general #name {
+  font-size: 36px;
+}
+
+#general #career {
+  font-size: 18px;
+  column-rule: rgb(90, 90, 90);
+}
+
+#contact {
+  font-size: 18px;
+}
+
+.info-box {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.info-box h3 {
+  font-size: 26px;
+  padding: 5px 0;
+  margin-bottom: 10px;
+  border-top: 2px solid rgb(90, 90, 90);
+  border-bottom: 2px solid rgb(90, 90, 90);
+}
+
+.info-box aside {
+  width: 15vw;
+}
+
+.info-box section {
+  width: 45vw;
+}
+
+#education .degree {
+  padding-left: 10px;
+  font-size: 18px;
+}
+
+#profile p {
+  padding: 0 10px;
+  font-size: 18px;
+  text-align: justify;
+  text-indent: 50px;
+}
+
+#expertise {
+  font-size: 18px;
+}
+
+#expertise h4 {
+  padding-left: 10px;
+}
+
+#expertise ul {
+  margin-top: 10px;
+}
+
+#expertise li {
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+#experience .experience {
+  padding-left: 10px;
+  font-size: 18px;
+}

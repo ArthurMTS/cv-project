@@ -4,7 +4,7 @@ import '../styles/header.css';
 
 export function Header({ edit, handleEdit }) {
   return (
-    <header>
+    <header id='main-header'>
       <h1>CV Creator</h1>
       <nav>
         <Button
