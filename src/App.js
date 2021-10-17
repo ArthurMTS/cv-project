@@ -4,6 +4,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 
 import { Preview } from './pages/Preview';
+import { Edit } from './pages/Edit';
 
 import './styles/global.css';
 
@@ -14,8 +15,8 @@ export default function App() {
     <div className='app'>
       <Header edit={edit} handleEdit={setEdit} />
       {
-        !edit ?
-          <h1>Hello</h1> :
+        edit ?
+          <Edit /> :
           <Preview />
       }
       <Footer />

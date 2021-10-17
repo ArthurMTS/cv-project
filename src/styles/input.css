@@ -1,0 +1,8 @@
+.custom-input {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  min-width: 350px;
+  border-bottom: 2px solid rgb(119, 119, 119);
+}
