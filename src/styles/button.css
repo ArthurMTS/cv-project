@@ -18,3 +18,7 @@ button:disabled {
   background-color: #353545;
   cursor: not-allowed;
 }
+
+.edit {
+  background-color: rgb(12, 160, 152);
+}

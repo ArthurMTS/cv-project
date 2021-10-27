@@ -2,6 +2,6 @@ import '../styles/input.css';
 
 export function Input(props) {
   return (
-    <input className='custom-input' {...props} required />
+    <input className='custom-input' {...props} />
   );
 }
