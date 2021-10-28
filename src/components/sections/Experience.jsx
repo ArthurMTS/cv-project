@@ -1,11 +1,13 @@
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 import { Input } from '../Input';
 import { Button } from '../Button';
 
+import { DataContext } from '../../contexts/data';
+
 import '../../styles/section.css';
 
-export function Experience({ handler }) {
+export function Experience() {
   const [edit, setEdit] = useState(true);
   const [position, setPosition] = useState('');
   const [corpName, setCorpName] = useState('');
@@ -13,12 +15,24 @@ export function Experience({ handler }) {
   const [start, setStart] = useState('');
   const [finish, setFinish] = useState('');
 
+  const { experience, setExperience } = useContext(DataContext);
+
+  useEffect(() => {
+    if (experience) {
+      setPosition(experience.position);
+      setCorpName(experience.corpName);
+      setLocation(experience.location);
+      setStart(experience.start);
+      setFinish(experience.finish);
+    }
+  }, [experience]);
+
   function handleSubmit(e) {
     e.preventDefault();
 
     setEdit(false);
 
-    handler({
+    setExperience({
       position,
       corpName,
       location,

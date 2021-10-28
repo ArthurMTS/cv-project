@@ -1,11 +1,12 @@
+import { useContext } from 'react';
+
+import { DataContext } from '../contexts/data';
+
 import '../styles/preview.css';
 
-export function Preview({
-  general,
-  education,
-  experience,
-  expertise
-}) {
+export function Preview() {
+  const { general, education, experience, expertise } = useContext(DataContext);
+
   return (
     <main id='preview'>
       <header>

@@ -1,11 +1,13 @@
-import { useState } from 'react';
+import { useState, useContext, useEffect } from 'react';
 
 import { Input } from "../Input";
 import { Button } from "../Button";
 
+import { DataContext } from '../../contexts/data';
+
 import '../../styles/section.css';
 
-export function General({ handler }) {
+export function General() {
   const [edit, setEdit] = useState(true);
   const [name, setName] = useState('');
   const [career, setCareer] = useState('');
@@ -13,12 +15,24 @@ export function General({ handler }) {
   const [phone, setPhone] = useState('');
   const [profile, setProfile] = useState('');
 
+  const { general, setGeneral } = useContext(DataContext);
+
+  useEffect(() => {
+    if (general) {
+      setName(general.name);
+      setCareer(general.career);
+      setEmail(general.email);
+      setPhone(general.phone);
+      setProfile(general.profile);
+    }
+  }, [general]);
+
   function handleSubmit(e) {
     e.preventDefault();
 
     setEdit(false);
 
-    handler({
+    setGeneral({
       name,
       career,
       email,

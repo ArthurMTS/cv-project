@@ -1,24 +1,38 @@
-import { useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 
 import { Input } from "../Input";
 import { Button } from "../Button";
 
+import { DataContext } from '../../contexts/data';
+
 import '../../styles/section.css';
 
-export function Expertise({ handler }) {
+export function Expertise() {
   const [edit, setEdit] = useState(true);
   const [skillOne, setSkillOne] = useState('');
   const [skillTwo, setSkillTwo] = useState('');
   const [skillThree, setSkillThree] = useState('');
   const [skillFour, setSkillFour] = useState('');
   const [skillFive, setSkillFive] = useState('');
+
+  const { expertise, setExpertise } = useContext(DataContext);
+
+  useEffect(() => {
+    if (expertise) {
+      setSkillOne(expertise.skillOne);
+      setSkillTwo(expertise.skillTwo);
+      setSkillThree(expertise.skillThree);
+      setSkillFour(expertise.skillFour);
+      setSkillFive(expertise.skillFive);
+    }
+  }, [expertise])
   
   function handleSubmit(e) {
     e.preventDefault();
 
     setEdit(false);
 
-    handler({
+    setExpertise({
       skillOne,
       skillTwo,
       skillThree,

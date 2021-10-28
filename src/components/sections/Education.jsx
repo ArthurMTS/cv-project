@@ -1,11 +1,13 @@
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 import { Input } from '../Input';
 import { Button } from '../Button';
 
+import { DataContext } from '../../contexts/data';
+
 import '../../styles/section.css';
 
-export function Education({ handler }) {
+export function Education() {
   const [edit, setEdit] = useState(true);
   const [degree, setDegree] = useState('');
   const [university, setUniversity] = useState('');
@@ -13,12 +15,24 @@ export function Education({ handler }) {
   const [start, setStart] = useState('');
   const [finish, setFinish] = useState('');
 
+  const { education, setEducation } = useContext(DataContext);
+
+  useEffect(() => {
+    if (education) {
+      setDegree(education.degree);
+      setUniversity(education.university);
+      setLocation(education.location);
+      setStart(education.start);
+      setFinish(education.finish);
+    }
+  }, [education]);
+
   function handleSubmit(e) {
     e.preventDefault();
 
     setEdit(false);
     
-    handler({
+    setEducation({
       degree,
       university,
       location,
