@@ -92,10 +92,10 @@ export function General() {
           </form> :
           <div className='info'>
             <strong>{name}</strong>
-            <p><spam>Career:</spam> {career}</p>
-            <p><spam>E-mail:</spam> {email}</p>
-            <p><spam>Phone:</spam> {phone}</p>
-            <p className='profile'><spam>Profile:</spam> {profile}</p>
+            <p><span>Career:</span> {career}</p>
+            <p><span>E-mail:</span> {email}</p>
+            <p><span>Phone:</span> {phone}</p>
+            <p className='profile'><span>Profile:</span> {profile}</p>
             <Button className='edit' onClick={handleEdit}>Edit</Button>
           </div>
       }

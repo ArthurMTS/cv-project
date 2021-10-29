@@ -91,12 +91,12 @@ export function Experience() {
             <Button type='submit'>Submit</Button>
           </form> :
           <div className='info'>
-            <p><spam>Position:</spam> {position}</p>
-            <p><spam>Corporation Name:</spam> {corpName}</p>
-            <p><spam>Location:</spam> {location}</p>
+            <p><span>Position:</span> {position}</p>
+            <p><span>Corporation Name:</span> {corpName}</p>
+            <p><span>Location:</span> {location}</p>
             <div>
-              <p><spam>Start:</spam> {start}</p>
-              <p><spam>Finish:</spam> {finish}</p>
+              <p><span>Start:</span> {start}</p>
+              <p><span>Finish:</span> {finish}</p>
             </div>
             <Button className='edit' onClick={handleEdit}>Edit</Button>
           </div>

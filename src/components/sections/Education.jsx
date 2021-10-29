@@ -91,12 +91,12 @@ export function Education() {
             <Button type='submit'>Submit</Button>
           </form> :
           <div className='info'>
-            <p><spam>Degree:</spam> {degree}</p>
-            <p><spam>University:</spam> {university}</p>
-            <p><spam>Location:</spam> {location}</p>
+            <p><span>Degree:</span> {degree}</p>
+            <p><span>University:</span> {university}</p>
+            <p><span>Location:</span> {location}</p>
             <div>
-              <p><spam>Start:</spam> {start}</p>
-              <p><spam>Finish:</spam> {finish}</p>
+              <p><span>Start:</span> {start}</p>
+              <p><span>Finish:</span> {finish}</p>
             </div>
             <Button className='edit' onClick={handleEdit}>Edit</Button>
           </div>
