@@ -5,6 +5,8 @@ import { Button } from "../Button";
 
 import { DataContext } from '../../contexts/data';
 
+import editSvg from '../../assets/edit.svg';
+
 import '../../styles/section.css';
 
 export function Expertise() {
@@ -24,6 +26,7 @@ export function Expertise() {
       setSkillThree(expertise.skillThree);
       setSkillFour(expertise.skillFour);
       setSkillFive(expertise.skillFive);
+      setEdit(false);
     }
   }, [expertise])
   
@@ -95,7 +98,9 @@ export function Expertise() {
               <li>{skillFour}</li>
               <li>{skillFive}</li>
             </ul>
-            <Button className='edit' onClick={handleEdit}>Edit</Button>
+            <Button className='edit' onClick={handleEdit}>
+              <img src={editSvg} alt='edit icon' />
+            </Button>
           </div>
       }
     </section>

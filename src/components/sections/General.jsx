@@ -5,6 +5,8 @@ import { Button } from "../Button";
 
 import { DataContext } from '../../contexts/data';
 
+import editSvg from '../../assets/edit.svg';
+
 import '../../styles/section.css';
 
 export function General() {
@@ -24,6 +26,7 @@ export function General() {
       setEmail(general.email);
       setPhone(general.phone);
       setProfile(general.profile);
+      setEdit(false);
     }
   }, [general]);
 
@@ -96,7 +99,9 @@ export function General() {
             <p><span>E-mail:</span> {email}</p>
             <p><span>Phone:</span> {phone}</p>
             <p className='profile'><span>Profile:</span> {profile}</p>
-            <Button className='edit' onClick={handleEdit}>Edit</Button>
+            <Button className='edit' onClick={handleEdit}>
+              <img src={editSvg} alt='edit icon' />
+            </Button>
           </div>
       }
     </section>

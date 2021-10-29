@@ -5,6 +5,8 @@ import { Button } from '../Button';
 
 import { DataContext } from '../../contexts/data';
 
+import editSvg from '../../assets/edit.svg';
+
 import '../../styles/section.css';
 
 export function Experience() {
@@ -24,6 +26,7 @@ export function Experience() {
       setLocation(experience.location);
       setStart(experience.start);
       setFinish(experience.finish);
+      setEdit(false);
     }
   }, [experience]);
 
@@ -98,7 +101,9 @@ export function Experience() {
               <p><span>Start:</span> {start}</p>
               <p><span>Finish:</span> {finish}</p>
             </div>
-            <Button className='edit' onClick={handleEdit}>Edit</Button>
+            <Button className='edit' onClick={handleEdit}>
+              <img src={editSvg} alt='edit icon' />
+            </Button>
           </div>
       }
     </section>

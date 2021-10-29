@@ -5,6 +5,8 @@ import { Button } from '../Button';
 
 import { DataContext } from '../../contexts/data';
 
+import editSvg from '../../assets/edit.svg';
+
 import '../../styles/section.css';
 
 export function Education() {
@@ -24,6 +26,7 @@ export function Education() {
       setLocation(education.location);
       setStart(education.start);
       setFinish(education.finish);
+      setEdit(false);
     }
   }, [education]);
 
@@ -98,7 +101,9 @@ export function Education() {
               <p><span>Start:</span> {start}</p>
               <p><span>Finish:</span> {finish}</p>
             </div>
-            <Button className='edit' onClick={handleEdit}>Edit</Button>
+            <Button className='edit' onClick={handleEdit}>
+              <img src={editSvg} alt='edit icon' />
+            </Button>
           </div>
       }
     </section>
