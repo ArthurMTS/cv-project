@@ -1,0 +1,169 @@
+#edit {
+  width: 80vw;
+  margin: 100px auto 30px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #222;
+}
+
+#edit section {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  border-bottom: 2px solid #222;
+}
+
+#edit section:last-child {
+  border: none;
+}
+
+#edit section h2 {
+  margin-bottom: 10px;
+  border-bottom: 2px solid #222;
+}
+
+#edit form {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40vw;
+}
+
+#edit form div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#edit form div input {
+  width: 19vw;
+}
+
+#edit form textarea {
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid #178f3b;
+  border-radius: 5px;
+}
+
+#edit section strong,
+#edit section p {
+  font-size: 18px;
+}
+
+#edit span {
+  font-weight: bold;
+}
+
+#edit section li {
+  list-style: none;
+  font-size: 18px;
+  text-indent: 10px;
+}
+
+#edit section .profile {
+  width: 40vw;
+}
+
+#edit .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#edit .info p {
+  margin: 5px 0;
+}
+
+#edit .info div {
+  display: flex;
+  justify-content: space-around;
+}
+
+#edit .edit {
+  align-self: center;
+  margin-top: 10px;
+  width: 100px;
+}
+
+#edit button[type=submit] {
+  align-self: center;
+  margin-top: 10px;
+  width: 150px;
+}
+
+#general strong {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+#expertise strong {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 550px) {
+  #edit {
+    margin-top: 150px;
+  }
+}
+
+@media (max-width: 700px) {
+  #edit form {
+    width: 50vw;
+  }
+
+  #edit form div input {
+    width: 24vw;
+  }
+}
+
+@media (min-width: 800px) {
+  #edit {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 1050px) {
+  #edit {
+    width: 50vw;
+  }
+
+  #edit form {
+    width: 30vw;
+  }
+
+  #edit form div input {
+    width: 14vw;
+  }
+
+  #edit .info {
+    width: 30vw;
+  }
+
+  #expertise ul {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+  } 
+
+  #edit section .profile {
+    width: 25vw;
+  }
+}
+
+@media (min-width: 1500px) {
+  #edit .info {
+    padding: 0 5vw;
+  }
+}

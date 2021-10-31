@@ -1,40 +1,25 @@
-import React, { Component } from 'react';
-
-import { Button } from './FormElements';
+import { Button } from './Button';
 
 import '../styles/header.css';
 
-export class Header extends Component {
-  constructor(props) {
-    super(props);
-
-    this.handleSwitch = this.handleSwitch.bind(this);
-  }
-
-  handleSwitch(event) {
-    if (!event.target.classList.contains('blocked'))
-      this.props.changePage();
-  }
-
-  render() {
-    return (
-      <header id='header'>
-        <h1 id='title'>CV Creator</h1>
-        <nav id='nav'>
-          <Button 
-            className={this.props.edit ? 'blocked' : ''}
-            onClick={this.handleSwitch}
-          >
-            Edit mode
-          </Button>
-          <Button 
-            className={!this.props.edit ? 'blocked' : ''} 
-            onClick={this.handleSwitch}
-          >
-            Preview mode
-          </Button>
-        </nav>
-      </header>
-    );
-  }
+export function Header({ edit, handleEdit }) {
+  return (
+    <header id='main-header'>
+      <h1>CV Creator</h1>
+      <nav>
+        <Button
+          disabled={edit}
+          onClick={() => handleEdit(!edit)}
+        >
+          Edit Mode
+        </Button>
+        <Button
+          disabled={!edit}
+          onClick={() => handleEdit(!edit)}
+        >
+          Preview Mode
+        </Button>
+      </nav>
+    </header>
+  )
 }

@@ -1,90 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   outline: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
-button {
-  cursor: pointer;
-  transition: all .2s;
-}
-
-button:hover {
-  transform: scale(1.05);
-}
-
-a {
-  text-decoration: none;
-  color: #222;
-}
-
-html, body, #root {
-  height: 100%;
-}
-
-#edit {
-  margin: 100px 0 25px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-#preview {
-  min-height: 92.3vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(240, 239, 239);
-  width: 60vw;
-  margin: 0 auto;
-}
-
-#preview h2 {
-  color: #222;
-  font-size: 30px;
-}
-
-#preview #content {
-  width: 40vw;
-  margin: 0 auto;
-}
-
-#content h3 {
-  font-size: 26px;
-  color: rgb(85, 135, 228);
-  border-top: 2px solid rgb(85, 135, 228);
-  border-bottom: 2px solid rgb(85, 135, 228);
-  text-indent: 15px;
-  margin-bottom: 10px;
-}
-
-#contacts {
-  color: #585858;
-  margin: 10px 0 20px 0;
-  font-size: 20px;
-}
-
-#education p, #practical p {
-  font-size: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-div span p {
-  font-size: 16px !important;
-  border-right: 2px solid rgb(85, 135, 228);
-  padding-right: 10px;
-  margin-right: 10px;
-}
-
-#practical {
-  margin-top: 20px;
+body, #root, #app {
+  background-color: #eee;
 }
 
 /* custom scroll */
@@ -98,7 +23,7 @@ div span p {
 }
  
 ::-webkit-scrollbar-thumb {
-  background: #252535;
+  background: #222;
   border-radius: 5px;
 }
 

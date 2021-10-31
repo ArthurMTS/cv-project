@@ -1,15 +1,18 @@
-import React, { Component } from 'react';
+import { General } from '../components/sections/General';
+import { Education } from '../components/sections/Education';
+import { Experience } from '../components/sections/Experience';
+import { Expertise } from '../components/sections/Expertise';
 
-import { General, Educational, Practical } from '../components/Sections';
+import '../styles/edit.css';
 
-export class Edit extends Component {
-  render() {
-    return (
-      <div id='edit'>
-        <General handler={this.props.handleGeneral} general={this.props.general} />
-        <Educational handler={this.props.handleEducational} educational={this.props.educational} />
-        <Practical handler={this.props.handlePractical} practical={this.props.practical} />
-      </div>
-    );
-  }
+export function Edit() {
+
+  return (
+    <main id='edit'>
+      <General />
+      <Education />
+      <Experience />
+      <Expertise />
+    </main>
+  );
 }

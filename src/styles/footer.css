@@ -1,21 +1,21 @@
-#footer {
-  background-color: #252530;
+footer {
+  background-color: #222;
+  padding: 15px 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 10px 0;
-}
-
-#footer a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 100%;
-  padding: 2px;
-}
-
-#footer-text {
   font-size: 18px;
+  gap: 15px;
   color: #fff;
+}
+
+footer a {
+  transition: all .2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer a:hover {
+  filter: opacity(.9);
 }
