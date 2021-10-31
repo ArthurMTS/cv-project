@@ -7,8 +7,6 @@ import { DataContext } from '../../contexts/data';
 
 import editSvg from '../../assets/edit.svg';
 
-import '../../styles/section.css';
-
 export function Expertise() {
   const [edit, setEdit] = useState(true);
   const [skillOne, setSkillOne] = useState('');
@@ -49,7 +47,7 @@ export function Expertise() {
   }
 
   return (
-    <section id='general' className='sec'>
+    <section id='expertise' className='sec'>
       <h2 className='sec-title'>Expertise</h2>
       {
         edit ?

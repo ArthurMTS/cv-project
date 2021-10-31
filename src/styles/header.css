@@ -1,17 +1,31 @@
 #main-header {
-  background-color: #252535;
+  background-color: #222;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 15px 100px;
+  justify-content: space-between;
+  padding: 15px 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 #main-header h1 {
-  color: rgb(121, 165, 247);
-  font-size: 26px;
+  color: #178f3b;
 }
 
 #main-header nav {
-  border: 2px solid cornflowerblue;
+  border: 2px solid #178f3b;
   border-radius: 7px;
+}
+
+@media(max-width: 550px) {
+  #main-header {
+    flex-direction: column;
+  }
+
+  #main-header h1 {
+    margin-bottom: 10px;
+  }
 }

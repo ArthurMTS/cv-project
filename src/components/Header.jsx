@@ -8,14 +8,12 @@ export function Header({ edit, handleEdit }) {
       <h1>CV Creator</h1>
       <nav>
         <Button
-          className='blue'
           disabled={edit}
           onClick={() => handleEdit(!edit)}
         >
           Edit Mode
         </Button>
         <Button
-          className='blue'
           disabled={!edit}
           onClick={() => handleEdit(!edit)}
         >

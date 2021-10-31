@@ -1,24 +1,21 @@
 footer {
-  background-color: #252535;
+  background-color: #222;
+  padding: 15px 0;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 10px 0;
-  gap: 10px;
-}
-
-footer p {
-  color: #fff;
+  justify-content: center;
   font-size: 18px;
+  gap: 15px;
+  color: #fff;
 }
 
 footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: all .2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 footer a:hover {
-  transform: scale(1.1);
+  filter: opacity(.9);
 }

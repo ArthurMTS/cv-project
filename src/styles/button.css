@@ -1,24 +1,20 @@
 button {
+  cursor: pointer;
   padding: 10px;
   font-size: 18px;
-  color: #fff;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
+  background-color: #178f3b;
+  color: #eee;
   transition: all .2s;
-  background-color: rgb(82, 140, 247)
-}
-
-button:hover {
-  transform: scale(1.1);
 }
 
 button:disabled {
-  transform: scale(1);
-  background-color: #353545;
+  background-color: #222;
+  filter: opacity(1) !important;
   cursor: not-allowed;
 }
 
-.edit {
-  background-color: rgb(12, 160, 152);
+button:hover {
+  filter: opacity(.9);
 }

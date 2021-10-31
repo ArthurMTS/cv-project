@@ -8,8 +8,8 @@
   font-family: 'Roboto', sans-serif;
 }
 
-#root, #app {
-  background-color: #eee9ed;
+body, #root, #app {
+  background-color: #eee;
 }
 
 /* custom scroll */
@@ -23,7 +23,7 @@
 }
  
 ::-webkit-scrollbar-thumb {
-  background: #252535;
+  background: #222;
   border-radius: 5px;
 }
 

@@ -7,8 +7,6 @@ import { DataContext } from '../../contexts/data';
 
 import editSvg from '../../assets/edit.svg';
 
-import '../../styles/section.css';
-
 export function General() {
   const [edit, setEdit] = useState(true);
   const [name, setName] = useState('');

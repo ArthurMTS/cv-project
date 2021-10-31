@@ -3,6 +3,8 @@ import { Education } from '../components/sections/Education';
 import { Experience } from '../components/sections/Experience';
 import { Expertise } from '../components/sections/Expertise';
 
+import '../styles/edit.css';
+
 export function Edit() {
 
   return (

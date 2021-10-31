@@ -7,8 +7,6 @@ import { DataContext } from '../../contexts/data';
 
 import editSvg from '../../assets/edit.svg';
 
-import '../../styles/section.css';
-
 export function Education() {
   const [edit, setEdit] = useState(true);
   const [degree, setDegree] = useState('');
@@ -49,7 +47,7 @@ export function Education() {
   }
 
   return (
-    <section id='general' className='sec'>
+    <section id='education' className='sec'>
       <h2 className='sec-title'>Educational information</h2>
       {
         edit ?
