@@ -2,13 +2,11 @@ import { useState, useEffect, createContext } from 'react';
 
 export const DataContext = createContext({});
 
-let update = false;
-
 export function DataProvider({ children }) {
-  const [general, setGeneral] = useState({});
-  const [education, setEducation] = useState({});
-  const [experience, setExperience] = useState({});
-  const [expertise, setExpertise] = useState({});
+  const [general, setGeneral] = useState(null);
+  const [education, setEducation] = useState(null);
+  const [experience, setExperience] = useState(null);
+  const [expertise, setExpertise] = useState(null);
 
   useEffect(() => {
     if (localStorage.getItem('data')) {
@@ -19,21 +17,19 @@ export function DataProvider({ children }) {
       setExperience(data.experience);
       setExpertise(data.expertise);
     }
-
-    update = true;
   }, []);
 
   useEffect(() => {
-    if (update) {
-      const data = {
-        general,
-        education,
-        experience,
-        expertise
-      };
-  
-      localStorage.setItem('data', JSON.stringify(data));
-    }
+    if (!general && !education && !experience && !expertise) return;
+
+    const data = {
+      general,
+      education,
+      experience,
+      expertise
+    };
+
+    localStorage.setItem('data', JSON.stringify(data));
   }, [general, education, experience, expertise]);
 
   return (
